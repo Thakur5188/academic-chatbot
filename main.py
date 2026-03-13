@@ -6,7 +6,7 @@ from google.genai import types
 app = Flask(__name__)
 
 # SECURITY UPGRADE: This pulls the key safely from the cloud server
-API_KEY = os.environ.get("AIzaSyDSVfV4NUz_JqIxDwDJlV2CEzMS4stzErk") 
+API_KEY = os.environ.get("AIzaSyCZmWq4FZvqRx7VBCztd3QqLUDHso4YY_I") 
 
 # Safety check to prevent crashing if the key is missing
 if not API_KEY:
@@ -58,4 +58,5 @@ def chat():
     return Response(generate(), mimetype='text/plain')
 
 if __name__ == "__main__":
+
     app.run(debug=True)
